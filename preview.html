@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christian Hidalgo | Presentación Junta Directiva</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#050b18;color:white;overflow:hidden}
+.slide{
+height:100vh;display:none;padding:7vw;
+background:radial-gradient(circle at top right,#123b75,#050b18 60%);
+animation:fade .6s ease;
+}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+h1{font-size:4rem;color:#7ec3ff;margin-bottom:20px}
+h2{font-size:2.6rem;color:#8cc7ff;margin-bottom:28px}
+p,li{font-size:1.3rem;line-height:1.8;max-width:1100px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.card{background:rgba(255,255,255,.07);padding:25px;border-radius:18px;backdrop-filter:blur(8px)}
+.metric{font-size:2rem;color:#7ec3ff;font-weight:700}
+nav{position:fixed;bottom:30px;right:30px}
+button{padding:14px 20px;border:none;border-radius:12px;background:#7ec3ff;color:#05101f;font-weight:700;margin-left:8px;cursor:pointer}
+small{color:#d3e7ff}
+</style>
+<script>
+let c=0;
+function s(){return document.querySelectorAll('.slide')}
+function show(i){s().forEach((x,n)=>x.style.display=n===i?'block':'none');c=i}
+function next(){show((c+1)%s().length)}
+function prev(){show((c-1+s().length)%s().length)}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();});
+window.onload=()=>show(0);
+</script>
+</head>
+<body>
+
+<section class="slide">
+<h1>Christian Hidalgo</h1>
+<h2>Propuesta de Incorporación Estratégica</h2>
+<p>Rol ejecutivo-técnico orientado a acelerar la consolidación operativa, comercial y tecnológica de la startup.</p>
+<small>Desarrollador de Software | Maestría en DevOps & Cloud Computing</small>
+</section>
+
+<section class="slide">
+<h2>Resumen Ejecutivo</h2>
+<div class="grid">
+<div class="card"><div class="metric">Cliente</div><p>Representación técnica y confianza comercial.</p></div>
+<div class="card"><div class="metric">Producto</div><p>Evolución continua basada en feedback real.</p></div>
+<div class="card"><div class="metric">Calidad</div><p>Validación funcional y aseguramiento de entrega.</p></div>
+<div class="card"><div class="metric">Escalabilidad</div><p>Procesos y arquitectura preparados para crecimiento.</p></div>
+</div>
+</section>
+
+<section class="slide">
+<h2>Rol dentro de la Organización</h2>
+<ul>
+<li>Interfaz estratégica entre cliente y desarrollo</li>
+<li>Supervisión funcional del ciclo de entrega</li>
+<li>Gestión de requerimientos y trazabilidad</li>
+<li>Evaluación de calidad orientada a negocio</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Modelo Operativo Propuesto</h2>
+<p>Sprints quincenales, backlog priorizado, retrospectivas, métricas de cumplimiento y validación temprana.</p>
+<div class="grid">
+<div class="card">Framework Scrum</div>
+<div class="card">Gestión con Jira / GitHub Projects</div>
+</div>
+</section>
+
+<section class="slide">
+<h2>Impacto Esperado</h2>
+<ul>
+<li>Mayor alineación cliente-producto</li>
+<li>Reducción de retrabajo</li>
+<li>Incremento en satisfacción del cliente</li>
+<li>Madurez operativa desde etapa temprana</li>
+</ul>
+</section>
+
+<section class="slide">
+<h2>Roadmap de Implementación</h2>
+<div class="grid">
+<div class="card"><b>Fase 1</b><p>Estructuración operativa</p></div>
+<div class="card"><b>Fase 2</b><p>Implementación ágil</p></div>
+<div class="card"><b>Fase 3</b><p>Optimización y automatización</p></div>
+<div class="card"><b>Fase 4</b><p>Escalamiento controlado</p></div>
+</div>
+</section>
+
+<section class="slide">
+<h2>Visión Compartida</h2>
+<p>Construir una startup tecnológica disciplinada, orientada al cliente y respaldada por excelencia técnica.</p>
+<h1 style="font-size:2.2rem">Construyamos una operación sólida desde el inicio.</h1>
+</section>
+
+<nav>
+<button onclick="prev()">◀</button>
+<button onclick="next()">▶</button>
+</nav>
+
+</body>
+</html>
